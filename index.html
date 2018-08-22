@@ -49,9 +49,9 @@
 
     <script id="hackSpotsTable" type="text/html">
         <table>
-            <tr><th class="tHeader">Type</th><th class="tHeader">Title</th><th class="tHeader">Language</th><th class="tHeader">Author</th><th class="tHeader">Recorded by</th><th class="tHeader">Place</th><th class="tHeader">Date</th><th class="tHeader">Words</th><th class="">Download</th></tr>
+            <tr><th class="tHeader">Type</th><th class="tHeader">Title</th><th class="tHeader">Language</th><th class="tHeader">Creator(s)</th><th class="tHeader">Place</th><th class="tHeader">Date</th><th class="tHeader">Words</th><th class="">Download</th></tr>
             {{#rows}}
-                <tr id="{{rowNumber}}" class="spotRow"><td>{{type}}</td><td>{{title}}</td><td>{{language}}</td><td>{{author}}</td><td>{{recordedby}}</td><td>{{placecreated}}</td><td>{{datecreated}}</td><td>{{wordcount}}</td><td><a class="button" href="{{original}}" target="_blank">Original</a> <a class="button" href="{{slo}}" target="_blank">SLO</a></td></tr>
+                <tr id="{{rowNumber}}" class="spotRow"><td>{{type}}</td><td>{{title}}</td><td>{{language}}</td><td>{{creators}}</td><td>{{placecreated}}</td><td>{{datecreated}}</td><td>{{wordcount}}</td><td><a class="button" href="{{original}}" target="_blank">Original</a> <a class="button" href="{{slo}}" target="_blank">SLO</a></td></tr>
             {{/rows}}
         </table>
     </script>
@@ -63,8 +63,7 @@
             <p>{{summary}}</p>
             <ul>
                 <li><span class="category">Language:</span> {{language}}</li>
-                <li><span class="category">Author:</span> {{author}}</li>
-                <li><span class="category">Recorded by:</span> {{recordedby}}</li>
+                <li><span class="category">Creators:</span> {{creators}}</li>
                 <li><span class="category">Place:</span> {{placecreated}}</li>
                 <li><span class="category">Date:</span> {{datecreated}}</li>
             </ul>
@@ -86,8 +85,7 @@
             <p>{{summary}}</p>
             <ul>
                 <li><span class="category">Language:</span> {{language}}</li>
-                <li><span class="category">Author:</span> {{author}}</li>
-                <li><span class="category">Recorded by:</span> {{recordedby}}</li>
+                <li><span class="category">Creators:</span> {{creators}}</li>
                 <li><span class="category">Place:</span> {{placecreated}}</li>
                 <li><span class="category">Date:</span> {{datecreated}}</li>
             </ul>
