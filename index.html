@@ -49,9 +49,9 @@
 
     <script id="hackSpotsTable" type="text/html">
         <table>
-            <tr><th class="tHeader">Type</th><th class="tHeader">Title</th><th class="tHeader">Language</th><th class="tHeader">Creator(s)</th><th class="tHeader">Place</th><th class="tHeader">Date</th><th class="tHeader">Words</th><th class="">Download</th></tr>
+            <tr><th class="tHeader">Type</th><th class="tHeader">Title</th><th class="tHeader">Language</th><th class="tHeader">Creator(s)</th><th class="tHeader">Place</th><th class="tHeader">Year</th><th class="tHeader">Words</th><th class="">Download</th></tr>
             {{#rows}}
-                <tr id="{{rowNumber}}" class="spotRow"><td>{{type}}</td><td>{{title}}</td><td>{{language}}</td><td>{{creators}}</td><td>{{placecreated}}</td><td>{{datecreated}}</td><td>{{wordcount}}</td><td><a class="button" href="{{original}}" target="_blank">Original</a> <a class="button" href="{{slo}}" target="_blank">SLO</a></td></tr>
+                <tr id="{{rowNumber}}" class="spotRow"><td>{{type}}</td><td>{{title}}</td><td>{{language}}</td><td>{{creators}}</td><td>{{placecreated}}</td><td>{{year}}</td><td>{{wordcount}}</td><td><a class="button" href="{{original}}" target="_blank">Original</a> <a class="button" href="{{slo}}" target="_blank">SLO</a></td></tr>
             {{/rows}}
         </table>
     </script>
@@ -66,7 +66,7 @@
                 <li><span class="category">Author:</span> {{author}}</li>
                 <li><span class="category">Recorded by:</span> {{recordedby}}</li>
                 <li><span class="category">Place:</span> {{placecreated}}</li>
-                <li><span class="category">Date:</span> {{datecreated}}</li>
+                <li><span class="category">Date:</span> {{month}} {{day}}, {{year}}</li>
             </ul>
             <ul>
                 <li><a href="{{original}}" target="_blank">View original</a></li>
@@ -89,7 +89,7 @@
                 <li><span class="category">Author:</span> {{author}}</li>
                 <li><span class="category">Recorded by:</span> {{recordedby}}</li>
                 <li><span class="category">Place:</span> {{placecreated}}</li>
-                <li><span class="category">Date:</span> {{datecreated}}</li>
+                <li><span class="category">Date:</span> {{month}} {{day}}, {{year}}</li>
             </ul>
             <ul>
                 <li><a href="{{original}}" target="_blank">View original</a></li>
