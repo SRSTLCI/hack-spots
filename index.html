@@ -161,7 +161,7 @@
                 var latestCompleteSpot = []
                 var startWithLatestRow = data.reverse()
                 startWithLatestRow.forEach(function(row){
-                    if (!row.placecreated) return
+                    if (!row.lat || !row.long ) return
                     else latestCompleteSpot.push(row)
                 })
                 return latestCompleteSpot[0]
