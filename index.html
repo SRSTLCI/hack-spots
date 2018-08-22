@@ -52,9 +52,9 @@
 
     <script id="hackSpotsTable" type="text/html">
         <table>
-            <tr><th class="tHeader">Type</th><th class="tHeader">Title</th><th class="tHeader">Author</th><th class="tHeader">Interviewer</th><th class="tHeader">Place</th><th class="tHeader">Date</th><th class="">Elsewhere</th></tr>
+            <tr><th class="tHeader">Type</th><th class="tHeader">Title</th><th class="tHeader">Author</th><th class="tHeader">Interviewer</th><th class="tHeader">Place</th><th class="tHeader">Date</th><th class="">Download</th></tr>
             {{#rows}}
-                <tr id="{{rowNumber}}" class="spotRow"><td>{{type}}</td><td>{{title}}</td><td>{{author}}</td><td>{{interviewer}}</td><td>{{placecreated}}</td><td>{{datecreated}}</td><td><a class="button" href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">G Map</a> <a class="button" href="http://www.yelp.com/search?find_desc={{name}}&find_loc={{city}},{{state}}" target="_blank">Yelp</a></td></tr>
+                <tr id="{{rowNumber}}" class="spotRow"><td>{{type}}</td><td>{{title}}</td><td>{{author}}</td><td>{{interviewer}}</td><td>{{placecreated}}</td><td>{{datecreated}}</td><td><a class="button" href="{{original}}" target="_blank">Original</a> <a class="button" href="{{slo}}" target="_blank">SLO</a></td></tr>
             {{/rows}}
         </table>
     </script>
