@@ -52,9 +52,9 @@
 
     <script id="hackSpotsTable" type="text/html">
         <table>
-            <tr><th class="tHeader">Type</th><th class="tHeader">Title</th><th class="tHeader">Author</th><th class="tHeader">Interviewer</th><th class="tHeader">Place</th><th class="tHeader">Date</th><th class="">Download</th></tr>
+            <tr><th class="tHeader">Type</th><th class="tHeader">Title</th><th class="tHeader">Author</th><th class="tHeader">Recorded by</th><th class="tHeader">Place</th><th class="tHeader">Date</th><th class="tHeader">Words</th><th class="">Download</th></tr>
             {{#rows}}
-                <tr id="{{rowNumber}}" class="spotRow"><td>{{type}}</td><td>{{title}}</td><td>{{author}}</td><td>{{interviewer}}</td><td>{{placecreated}}</td><td>{{datecreated}}</td><td><a class="button" href="{{original}}" target="_blank">Original</a> <a class="button" href="{{slo}}" target="_blank">SLO</a></td></tr>
+                <tr id="{{rowNumber}}" class="spotRow"><td>{{type}}</td><td>{{title}}</td><td>{{author}}</td><td>{{recordedby}}</td><td>{{placecreated}}</td><td>{{datecreated}}</td><td>{{wordcount}}</td><td><a class="button" href="{{original}}" target="_blank">Original</a> <a class="button" href="{{slo}}" target="_blank">SLO</a></td></tr>
             {{/rows}}
         </table>
     </script>
@@ -63,8 +63,6 @@
         {{#rows}}
             <h4 class="fauxButton">MOST RECENT SPOT</h4>
             <h2>{{name}}</h2>
-            <p class="colorText">{{address}}<p>
-            <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
             <ul>
                 <li><span class="category">Wifi:</span> {{wifipassword}}</li>
                 <li><span class="category">Outlets:</span> {{outlets}}</li>
@@ -89,10 +87,8 @@
         {{#rows}}
             <h4 class="fauxButton">SELECTED SPOT</h4>
             <h2>{{name}}</h2>
-            <p class="colorText">{{address}}<p>
-            <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
             <ul>
-                <li><span class="category">Wifi:</span> {{wifipassword}}</li>
+                <li><span class="category">Recorded by:</span> {{recordedby}}</li>
                 <li><span class="category">Outlets:</span> {{outlets}}</li>
                 <li><span class="category">Couch:</span> {{couch}}</li>
                 <li><span class="category">Large Table:</span> {{slo}}</li>
