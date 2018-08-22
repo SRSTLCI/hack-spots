@@ -58,22 +58,21 @@
 
     <script id="latestSpot" type="text/html">
         {{#rows}}
-            <h4 class="fauxButton">MOST RECENT SPOT</h4>
+            <h4 class="fauxButton">LATEST ITEM</h4>
             <h2>{{name}}</h2>
+            <p>{{summary}}</p>
             <ul>
-                <li><span class="category">Wifi:</span> {{wifipassword}}</li>
-                <li><span class="category">Outlets:</span> {{outlets}}</li>
-                <li><span class="category">Couch:</span> {{couch}}</li>
-                <li><span class="category">Large Table:</span> {{slo}}</li>
-                <li><span class="category">Outdoor Seating:</span> {{outdoorseating}}</li>
-                <li><span class="category">Brewing:</span> {{brewing}}</li>
-                <li><span class="category">Contributed By:</span> <a href="http://www.twitter.com/{{contributerstwitter}}" target="_blank">@{{contributerstwitter}}</a></li>
+                <li><span class="category">Author:</span> {{author}}</li>
+                <li><span class="category">Recorded by:</span> {{recordedby}}</li>
+                <li><span class="category">Place:</span> {{placecreated}}</li>
+                <li><span class="category">Date:</span> {{datecreated}}</li>
+                <li><span class="category">Language:</span> {{language}}</li>
             </ul>
             <ul>
-                <li><a href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">View in Google Maps</a></li>
-                <li><a href="http://www.yelp.com/search?find_desc={{name}}&find_loc={{city}},{{state}}" target="_blank">Find on Yelp</a></li>
+                <li><a href="{{original}}" target="_blank">View original</a></li>
+                <li><a href="{{slo}}" target="_blank">View SLO (PDF)</a></li>
             </ul>
-        {{/rows}}
+            {{/rows}}
     </script>
 
     <script id="theNumberofSpots" type="text/html">
@@ -162,7 +161,7 @@
                 var latestCompleteSpot = []
                 var startWithLatestRow = data.reverse()
                 startWithLatestRow.forEach(function(row){
-                    if (!row.lat || !row.long || !row.name || !row.address || !row.city || !row.state ) return
+                    if (!row.lat || !row.long ) return
                     else latestCompleteSpot.push(row)
                 })
                 return latestCompleteSpot[0]
